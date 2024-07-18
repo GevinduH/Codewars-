@@ -1,0 +1,103 @@
+https://www.codewars.com/kata/sum-of-two-lowest-positive-integers
+
+function sumTwoSmallestNumbers(numbers) {     
+  numbers.sort(function (a, b) {    
+    return a - b;   
+  });    
+  return numbers[0] + numbers[1];   
+};   
+
+
+https://www.codewars.com/kata/remove-the-minimum/javascript    
+
+function removeSmallest(numbers) {   
+  while (numbers) {    
+    const newNumbers = numbers.slice()   
+    let smallest = newNumbers[0]   
+    for (let i=0;i<numbers.length;i++) {   
+     if (newNumbers[i]<=smallest) {    
+       smallest =numbers[i];     
+     } continue;    
+    }    
+    const index = newNumbers.indexOf(smallest)   
+    newNumbers.splice(index,1)    
+    return newNumbers;    
+  } return numbers;    
+    
+}     
+
+https://www.codewars.com/kata/the-highest-profit-wins    
+    
+function minMax(arr){     
+  const min =  Math.min(...arr);     
+  const max = Math.max(...arr);    
+  return [min, max];     
+}     
+
+https://www.codewars.com/kata/53dbd5315a3c69eed20002dd  
+
+function filter_list(l) {
+   return newList = l.filter((item)=> { return typeof item === 'number'})
+}
+
+https://www.codewars.com/kata/5502c9e7b3216ec63c0001aa
+
+function openOrSenior(data){
+	return data.map((element)=>{
+		if (element[0] >= 55 && element[1] > 7) {
+			return 'Senior';
+		}return 'Open';		
+	})
+}
+
+https://www.codewars.com/kata/return-the-day/javascript
+
+function whatday(num) { 
+	var obj = {
+		1:"Sunday",
+		2:"Monday",
+		3:"Tuesday",
+		4:"Wednesday",
+		5:"Thursday",
+		6:"Friday",
+		7:"Saturday"
+	}
+  if (num <= 7 && num>=1) {
+	return obj[num];
+  }return "Wrong, please enter a number between 1 and 7";
+
+}
+
+https://www.codewars.com/kata/beginner-lost-without-a-map/javascript
+
+function maps(x){
+	let doubledX;
+	return doubledX = x.map((num)=>num*2);
+}
+
+https://www.codewars.com/kata/array-plus-array/javascript
+
+function arrayPlusArray(arr1, arr2) {
+	const array = arr1.concat(arr2);
+	return array.reduce((a, b) => a + b);
+}
+
+https://www.codewars.com/kata/you-only-need-one-beginner/javascript
+
+function check(a, x) {
+  // your code here
+return a.includes(x);
+}
+
+https://www.codewars.com/kata/regular-ball-super-ball/javascript
+
+class Ball {
+	constructor(ballType) {
+		this.ballType = ballType || 'regular';
+		return this;
+	  }
+  }
+
+  https://www.codewars.com/kata/basic-subclasses-adam-and-eve/javascript
+
+  
