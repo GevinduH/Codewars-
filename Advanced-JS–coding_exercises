@@ -1,0 +1,65 @@
+http://www.codewars.com/kata/opposite-number
+function opposite(number) {
+  //your code here
+  return number *= -1;
+}
+
+http://www.codewars.com/kata/basic-mathematical-operations
+function basicOp(operation, value1, value2)
+{
+  // Code
+  return eval(`${value1} ${operation} ${value2}`)
+}
+
+http://www.codewars.com/kata/printing-array-elements-with-comma-delimiters
+function printArray(array){
+  //show me the code!
+  return array;
+  }
+
+http://www.codewars.com/kata/transportation-on-vacation
+function rentalCarCost(d) {
+	 if (d>=7) {
+		 console.log('meka')
+		 return (40*d)-50;
+	 }else if(d>=3){
+		 return (40*d)-20;
+	 }else {
+		 return 40*d;
+	 }
+}
+
+https://www.codewars.com/kata/get-the-middle-character
+function getMiddle(s){
+  if (s.length===1){
+	return s;
+  } 
+  return s.length%2===1 ? s.split('')[Math.ceil((s.length/2)-1)] : s.split('')[(s.length / 2) - 1] + s.split('')[(s.length / 2)];
+}
+
+http://www.codewars.com/kata/word-count
+Website says - "Whoops! The page you were looking for doesn't seem to exist."
+
+http://www.codewars.com/kata/remove-first-and-last-character-part-two
+function array(string) {
+	let arr= string.split(',');
+	if (arr.length > 2) {
+		arr.pop();
+		arr.shift();
+		arr=arr.join(' ');
+		return arr;
+	}return null	
+}
+
+http://www.codewars.com/kata/implement-array-dot-prototype-dot-filter-1
+Array.prototype.filter = function (func) {
+  const arr = [];
+  for (let i=0;i<this.length;i++){
+ 		  if (func(this[i])) {
+        arr.push(this[i]);
+      }
+	}
+  return arr;
+}
+
+http://www.codewars.com/kata/cross-product-of-vectors
