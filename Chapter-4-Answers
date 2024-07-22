@@ -100,4 +100,32 @@ class Ball {
 
   https://www.codewars.com/kata/basic-subclasses-adam-and-eve/javascript
 
+class God{
+/**
+ * @returns Human[]
+ */
+  static create(){
+	  return [new Man(), new Woman()];
+  }
+}
+
+class Human{
+	constructor() {
+		this.species = 'Human';
+	}
+}
+
+class Man extends Human {
+	constructor() {
+		super()
+		this.gender='man';
+	}
+}
+
+class Woman extends Human {
+	constructor() {
+		super()
+		this.gender='woman';
+	}
+}
   
