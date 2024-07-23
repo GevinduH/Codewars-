@@ -63,3 +63,114 @@ Array.prototype.filter = function (func) {
 }
 
 http://www.codewars.com/kata/cross-product-of-vectors
+function crossProduct(vector1, vector2) {
+	if (!Array.isArray(vector1) || !Array.isArray(vector2) || vector1.length !== 3 || vector2.length !== 3) {
+			throw ("Arguments are not 3D vectors!");
+		}
+	const arr=[]
+	arr[0] = vector1[1] * vector2[2] - vector1[2] * vector2[1];
+	arr[1] = vector1[2] * vector2[0] - vector1[0] * vector2[2];
+	arr[2] = vector1[0] * vector2[1] - vector1[1] * vector2[0];
+	return arr
+}
+
+ http://www.codewars.com/kata/sequence-generator-1
+
+
+http://www.codewars.com/kata/santaclausable-interface
+function isSantaClausable(obj) {
+		if (typeof obj.sayHoHoHo=== 'function' && typeof obj.distributeGifts==='function' && typeof obj.goDownTheChimney==='function') {
+		  return true;
+		}return false;	  
+}
+
+
+
+http://www.codewars.com/kata/fun-with-es6-classes-number-2-animals-and-inheritance
+class Shark extends Animal {
+  constructor(name, age, status) {
+	super(name, age, status);
+	this.legs = 0;
+	this.species = "shark";
+  this.status = status;
+  }
+}
+
+class Cat extends Animal {
+	  constructor(name, age, status) {
+		super(name, age, status);
+		this.legs = 4;
+		this.species = "cat";
+    this.status = status;
+	  }
+	introduce() {
+	return `Hello, my name is ${this.name} and I am ${this.age} years old.` + `  Meow meow!`
+	}
+}
+	
+class Dog extends Animal {
+	constructor(name, age, status, master){
+		super(name, age, status);
+		this.legs = 4;
+		this.species = "dog";
+		this.master = master;
+    this.status = status;
+	}
+	greetMaster(){
+		return `Hello ${this.master}`;
+	}
+}
+
+http://www.codewars.com/kata/fun-with-es6-classes-number-3-cuboids-cubes-and-getters
+class Cuboid {
+  constructor(length, width, height) {
+    this.length = length;
+    this.width = width;
+    this.height = height;
+  }
+  get surfaceArea(){
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+  get volume(){
+    return this.length * this.width * this.height;
+  }
+} 
+
+class Cube extends Cuboid {
+  constructor(length){
+    super(length)
+    this.width=length;
+    this.height=length;
+  }
+}
+
+https://www.codewars.com/kata/count-characters-in-your-string
+function count(string) {
+	const obj={};
+	for (let i=0; i<string.length; i++) {
+		if (obj[string[i]]) {
+			obj[string[i]]++
+		} else {
+			obj[string[i]]=1
+		}
+	  }
+	return string===null?{}:obj
+}
+
+ https://www.codewars.com/kata/simple-validation-of-a-username-with-regex
+function validateUsr(username) {
+  const res =  /^[a-z\d_]{4,16}$/.test(username)
+  return res;
+}
+
+https://www.codewars.com/kata/regexp-basics-is-it-a-letter
+String.prototype.isLetter = function() {
+  var s = /^[a-zA-Z]$/;
+  return  s.test(this)
+}
+
+https://www.codewars.com/kata/regexp-basics-is-it-a-vowel/
+String.prototype.vowel = function() {
+  var s = /^[aeiou]$/i;
+  return s.test(this);
+};
