@@ -1,0 +1,78 @@
+•	(6 kyu) http://www.codewars.com/kata/new-with-apply
+•	(6 kyu) http://www.codewars.com/kata/extract-nested-object-reference
+Object.prototype.hash = function(string) {
+	return string.split('.').reduce((acc, key) => {
+	if (acc && acc.hasOwnProperty(key)) {
+	  return acc[key];
+	} else {
+	  return undefined;
+	}
+  }, this);
+}
+
+•	(6 kyu) http://www.codewars.com/kata/array-helpers  
+var numbers = [1, 2, 3, 4, 5];
+
+Array.prototype.square = function() {
+  return this.map((num)=> {
+	const squareArr = num * num;
+	return squareArr;
+  });
+}
+
+Array.prototype.cube = function() {
+	return this.map((num)=> {
+		const cubeArr = num * num * num;
+		return cubeArr;
+	  });
+}
+
+Array.prototype.average = function() {
+	return this.reduce((acc,cvalue)=> {
+		return acc + cvalue;
+	  }, 0) / this.length;
+}
+
+Array.prototype.sum = function() {
+	return this.reduce((acc,cvalue)=> {
+		return acc + cvalue;
+	  }, 0)
+}
+
+
+Array.prototype.even = function() {
+	const evenArr = [];
+ 	this.forEach((el)=> {
+		if (el % 2 == 0) evenArr.push(el)
+	  })
+	return evenArr;
+}
+
+
+Array.prototype.odd = function() {
+	const oddArr = [];
+ 	this.forEach((el)=> {
+		if (el % 2 !== 0) oddArr.push(el)
+	  })
+	return oddArr;
+}
+
+•	(5 kyu) http://www.codewars.com/kata/replicate-new
+
+
+•	(5 kyu) http://www.codewars.com/kata/partition-on
+•	(6 kyu) http://www.codewars.com/kata/prefill-an-array
+
+
+•	(6 kyu) https://www.codewars.com/kata/base-conversion/
+•	(6 kyu) http://www.codewars.com/kata/closures-and-scopes
+•	(6 kyu) http://www.codewars.com/kata/can-you-keep-a-secret
+•	(5 kyu) http://www.codewars.com/kata/using-closures-to-share-class-state
+•	(5 kyu) http://www.codewars.com/kata/a-chain-adding-function
+•	(5 kyu) http://www.codewars.com/kata/function-cache
+•	(6 kyu) http://www.codewars.com/kata/function-composition
+•	(6 kyu) http://www.codewars.com/kata/function-composition-1
+•	(6 kyu) http://www.codewars.com/kata/stringing-me-along
+•	(5 kyu) http://www.codewars.com/kata/i-spy
+•	(5 kyu) http://www.codewars.com/kata/calculating-with-functions
+•	(6 kyu) http://www.codewars.com/kata/sum-of-digits-slash-digital-root/
