@@ -1,4 +1,11 @@
 •	(6 kyu) http://www.codewars.com/kata/new-with-apply
+function construct(Class, ...args) {
+  const obj = Object.create(Class.prototype);
+  Class.apply(obj, args); 
+  return obj;
+}
+
+
 •	(6 kyu) http://www.codewars.com/kata/extract-nested-object-reference
 Object.prototype.hash = function(string) {
 	return string.split('.').reduce((acc, key) => {
@@ -10,7 +17,9 @@ Object.prototype.hash = function(string) {
   }, this);
 }
 
+
 •	(6 kyu) http://www.codewars.com/kata/array-helpers  
+
 var numbers = [1, 2, 3, 4, 5];
 
 Array.prototype.square = function() {
@@ -50,6 +59,7 @@ Array.prototype.even = function() {
 
 
 Array.prototype.odd = function() {
+
 	const oddArr = [];
  	this.forEach((el)=> {
 		if (el % 2 !== 0) oddArr.push(el)
@@ -57,22 +67,102 @@ Array.prototype.odd = function() {
 	return oddArr;
 }
 
-•	(5 kyu) http://www.codewars.com/kata/replicate-new
 
-
-•	(5 kyu) http://www.codewars.com/kata/partition-on
 •	(6 kyu) http://www.codewars.com/kata/prefill-an-array
+
+function prefill(n, v) {
+  var newN = parseInt(n);
+  if ((typeof n === 'number' && n >= 0 && /\d/g.test(n) && n%1 ===0) || (typeof n === 'string' && parseInt(n) >= 0 && /^\d+$/.test(n) && parseInt(n)%1===0)) {
+	  if (n === 0 || newN === 0) {
+			return [];
+		  } else if (v === null) {
+			return Array(n).fill(undefined);
+		  } return Array(n).fill(v); 
+  }throw new TypeError(`${n} is invalid`);
+}
 
 
 •	(6 kyu) https://www.codewars.com/kata/base-conversion/
+
+function convert(input, source, target) {
+	let sourceBase = source.length;
+	let targetBase = target.length;
+	// console.log(sourceBase, targetBase);
+
+	function toBase10(input, sourceBase) {
+		let base10 = 0;
+		for (let i = 0; i < input.length; i++) {
+		  base10 = base10 * sourceBase + source.indexOf(input[i]);
+		}
+		return base10;
+	  }
+
+	function fromBase10(base10, targetBase) {
+		if (base10 === 0) {
+		  return target[0];
+		}
+		let result = '';
+		while (base10 > 0) {
+		  result = target[base10 % targetBase] + result;
+		  base10 = Math.floor(base10 / targetBase);
+		}
+		return result;
+	  }
+	let base10 = toBase10(input, sourceBase);
+	return fromBase10(base10, targetBase);
+}
+
+
 •	(6 kyu) http://www.codewars.com/kata/closures-and-scopes
+
+function createFunctions(n) {
+  var callbacks = [];
+
+   for (let i=0; i<n; i++) {
+	   callbacks.push(function() {
+	   return i;
+	 });
+   }
+	return callbacks;
+}
+
+
 •	(6 kyu) http://www.codewars.com/kata/can-you-keep-a-secret
-•	(5 kyu) http://www.codewars.com/kata/using-closures-to-share-class-state
-•	(5 kyu) http://www.codewars.com/kata/a-chain-adding-function
-•	(5 kyu) http://www.codewars.com/kata/function-cache
+function createSecretHolder(secret) {
+  let secretHolder= secret;
+  function setSecret(secret) {
+    secretHolder = secret;
+  }
+
+  function getSecret() {
+    return secretHolder;
+  }
+
+  return {
+    getSecret,
+    setSecret
+  };
+}
+
+
 •	(6 kyu) http://www.codewars.com/kata/function-composition
+
+
 •	(6 kyu) http://www.codewars.com/kata/function-composition-1
+
+
 •	(6 kyu) http://www.codewars.com/kata/stringing-me-along
-•	(5 kyu) http://www.codewars.com/kata/i-spy
-•	(5 kyu) http://www.codewars.com/kata/calculating-with-functions
+This page does not work
+
 •	(6 kyu) http://www.codewars.com/kata/sum-of-digits-slash-digital-root/
+function digitalRoot(n) {
+  const newN = n.toString()
+	let sum = 0;
+	if (newN.length>1) {
+		for (let i=0; i<newN.length; i++) {
+			sum += parseInt(newN[i]);
+		}while (sum.toString().length>1) {
+			return digitalRoot(sum);
+		}return sum
+	}return n
+}
