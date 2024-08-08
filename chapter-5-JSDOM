@@ -155,6 +155,11 @@ function compose(f,g) {
 
 
 •	(6 kyu) http://www.codewars.com/kata/function-composition-1
+function compose(...f) {
+  return function(g) {
+		return f.reduceRight((acc, fn)=> fn(acc),g)
+	}
+}
 
 
 •	(6 kyu) http://www.codewars.com/kata/stringing-me-along
