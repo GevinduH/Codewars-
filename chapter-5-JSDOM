@@ -146,6 +146,12 @@ function createSecretHolder(secret) {
 
 
 •	(6 kyu) http://www.codewars.com/kata/function-composition
+function compose(f,g) {
+  return function (...x) {
+     return f(g(...x))
+  }
+ 
+}
 
 
 •	(6 kyu) http://www.codewars.com/kata/function-composition-1
